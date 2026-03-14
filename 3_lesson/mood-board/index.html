@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Board</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Unbounded:wght@400;700;900&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== APP CARD ===== -->
+  <div class="app-card">
+
+    <!-- Window bar -->
+    <div class="window-bar">
+      <div class="window-dots">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+      </div>
+      <div class="window-title">mood-board — живое приложение</div>
+      <div class="window-badge" id="window-badge">● ожидание</div>
+    </div>
+
+    <!-- Stage -->
+    <div class="stage" id="stage">
+
+      <!-- Glow decoration -->
+      <div class="stage-glow" id="stage-glow"></div>
+
+      <!-- Emoji -->
+      <div class="mood-emoji" id="mood-emoji">✨</div>
+
+      <!-- Text -->
+      <div class="mood-text">
+        <h2 class="mood-title" id="mood-title">Выбери настроение</h2>
+        <p class="mood-subtitle" id="mood-subtitle">Нажми одну из кнопок ниже и страница оживёт</p>
+      </div>
+
+      <!-- Wave visualizer -->
+      <div class="wave" id="wave">
+        <!-- 14 полос, создаются через JS -->
+      </div>
+
+      <!-- Mood buttons -->
+      <div class="mood-buttons" id="mood-buttons">
+        <button class="mood-btn" data-mood="happy">😄 Радость</button>
+        <button class="mood-btn" data-mood="calm">🌊 Спокойствие</button>
+        <button class="mood-btn" data-mood="fire">🔥 Энергия</button>
+        <button class="mood-btn" data-mood="sad">🌧️ Грусть</button>
+        <button class="mood-btn" data-mood="love">💜 Любовь</button>
+        <button class="mood-btn" data-mood="chill">🌙 Чилл</button>
+      </div>
+
+      <!-- Stats row -->
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-label">// нажатий</span>
+          <span class="stat-value" id="click-count">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">// настроение</span>
+          <span class="stat-value" id="current-mood">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">// клавиша</span>
+          <span class="stat-value" id="key-hint">1–6</span>
+        </div>
+      </div>
+
+    </div><!-- /stage -->
+  </div><!-- /app-card -->
+
+  <script src="script.js"></script>
+</body>
+</html>
